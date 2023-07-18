@@ -23,7 +23,7 @@ function Report() {
     //     console.log("User Selected Value - ", event.target.value)
     const handleSubmit = async (e) => {
         try {
-            const response = await axios.post('http://localhost:5000/api/items', { software,version,description,fts });
+            const response = await axios.post('http://localhost:5001/api/items', { software,version,description,fts });
             console.log(response.data);
             console.log("hello world");
             console.log(items);

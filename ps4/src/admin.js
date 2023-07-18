@@ -62,7 +62,7 @@ export default Admin;
 //     const handleApprove = async (patchId) => {
 //         try {
 //             const result = await contract1.methods.vadd(patchId).send({ from: account });
-//             await axios.post('http://localhost:5000/verifier/transactions', { roleFunction: "verifier-approve", transactionHash: result.transactionHash });
+//             await axios.post('http://localhost:5001/verifier/transactions', { roleFunction: "verifier-approve", transactionHash: result.transactionHash });
 //             console.log('Transaction added successfully');
 //             alert("Successfully Updated");
 //         }
@@ -77,7 +77,7 @@ export default Admin;
 //     //   const result1 = await contract1.methods.rvadd(patchId,rejectReason).send({ from: account });
 //     //   alert("Successfully Updated");
 //     //   console.log()
-//     //   await axios.post('http://localhost:5000/verifier/transactions', { roleFunction: "verifier-reject", transactionHash: result1.transactionHash });
+//     //   await axios.post('http://localhost:5001/verifier/transactions', { roleFunction: "verifier-reject", transactionHash: result1.transactionHash });
 //     //   console.log('Transaction added successfully');
 //     //   // window.location.reload();
 //     // };
@@ -131,7 +131,7 @@ export default Admin;
 //         try {
 //             const result1 = await contract1.methods.rvadd(patchId, rejectReason).send({ from: account });
 //             console.log();
-//             await axios.post('http://localhost:5000/verifier/transactions', { roleFunction: "verifier-reject", transactionHash: result1.transactionHash });
+//             await axios.post('http://localhost:5001/verifier/transactions', { roleFunction: "verifier-reject", transactionHash: result1.transactionHash });
 //             console.log('Transaction added successfully');
 //         }
 //         catch (error) {

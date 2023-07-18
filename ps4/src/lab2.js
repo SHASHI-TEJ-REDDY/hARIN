@@ -18,7 +18,7 @@ function Labeller2() {
 
     const fetchItems = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/api/items');
+            const response = await axios.get('http://localhost:5001/api/items');
             const items = response.data;
 
             // Extracting names from the items array
@@ -48,9 +48,9 @@ function Labeller2() {
             const result=await contract1.methods.addbug(card.name, version, description, feature).send({ from: account });
             console.log(result);
             if(result){
-                await axios.post('http://localhost:5000/labeller/transactions', { roleFunction:"labeller-setbug", transactionHash:result.transactionHash });
+                await axios.post('http://localhost:5001/labeller/transactions', { roleFunction:"labeller-setbug", transactionHash:result.transactionHash });
                 console.log('Transaction added successfully');
-                const response = await axios.delete(`http://localhost:5000/api/items/${card._id}`);
+                const response = await axios.delete(`http://localhost:5001/api/items/${card._id}`);
                 console.log(response.data); // Optional: log the response from the server
                 setData56(prevData => prevData.filter(item => item !== card));
             }
@@ -68,7 +68,7 @@ function Labeller2() {
 
         // Remove the rejected card from the data56 state
         try {
-            const response = await axios.delete(`http://localhost:5000/api/items/${card._id}`);
+            const response = await axios.delete(`http://localhost:5001/api/items/${card._id}`);
             console.log(response.data); // Optional: log the response from the server
         } catch (error) {
             console.error(error);

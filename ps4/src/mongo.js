@@ -11,7 +11,7 @@ const App = () => {
 
   const fetchItems = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/items');
+      const response = await axios.get('http://localhost:5001/api/items');
       setItems(response.data);
     } catch (error) {
       console.error(error);
@@ -20,7 +20,7 @@ const App = () => {
 
   const addItem = async () => {
     try {
-      const response = await axios.post('http://localhost:5000/api/items', { name: newItemName });
+      const response = await axios.post('http://localhost:5001/api/items', { name: newItemName });
       setItems([...items, response.data]);
       setNewItemName('');
     } catch (error) {

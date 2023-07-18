@@ -68,7 +68,7 @@
 //         console.log(software,filteredArr3, filteredArr4);
 //         try {
 //             const result = await contract1.methods.gprior(software,filteredArr3, filteredArr4).send({ from: account });
-//             await axios.post('http://localhost:5000/labeller/transactions', { roleFunction: "labeller-priority", transactionHash: result.transactionHash });
+//             await axios.post('http://localhost:5001/labeller/transactions', { roleFunction: "labeller-priority", transactionHash: result.transactionHash });
 //             console.log('Transaction added successfully');
 //         }
 //         catch (error) {
@@ -246,7 +246,7 @@ function Getrpt() {
         console.log("Selected Descriptions:", filteredDescriptions);
         try {
             const result = await contract1.methods.gprior(software, filteredDescriptions, filteredValues).send({ from: account });
-            await axios.post('http://localhost:5000/labeller/transactions', { roleFunction: "labeller-priority", transactionHash: result.transactionHash });
+            await axios.post('http://localhost:5001/labeller/transactions', { roleFunction: "labeller-priority", transactionHash: result.transactionHash });
             console.log('Transaction added successfully');
         }
         catch (error) {

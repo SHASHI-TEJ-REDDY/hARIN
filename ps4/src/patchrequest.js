@@ -81,7 +81,7 @@ function Patchrequest() {
         try{
             const result = await contract1.methods.gbf(software, bugDescriptions, selectedFeatures).send({ from: account });
             console.log(result);
-            await axios.post('http://localhost:5000/admin/transactions', { roleFunction:"admin-patchrequest", transactionHash:result.transactionHash });
+            await axios.post('http://localhost:5001/admin/transactions', { roleFunction:"admin-patchrequest", transactionHash:result.transactionHash });
             console.log('Transaction added successfully');
         }catch (error) {
             console.error(error);

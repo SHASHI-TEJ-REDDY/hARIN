@@ -80,7 +80,7 @@ const Reupload = () => {
         .then(async (result) => {
           alert("Patch info successfully added to blockchain");
           console.log(result.transactionHash);
-          await axios.post('http://localhost:5000/developer/transactions', { roleFunction: "developer-register", transactionHash: result.transactionHash });
+          await axios.post('http://localhost:5001/developer/transactions', { roleFunction: "developer-register", transactionHash: result.transactionHash });
           console.log('Transaction added successfully', result.transactionHash);
         });
     }

@@ -21,7 +21,7 @@ const DownloadHistory = () => {
 
     const fetchData = async () => {
         try {
-            const response = await axios.get("http://localhost:5000/api/downloads");
+            const response = await axios.get("http://localhost:5001/api/downloads");
             const flattenedData = response.data.reduce((acc, item) => {
                 return [...acc, ...item.downloads.map((detail) => ({
                     ...item,

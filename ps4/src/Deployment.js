@@ -28,9 +28,9 @@ const Deployment = () => {
 
 
     const handleDeploy = async (patchId) => {
-        try{
-            const result=await contract1.methods.dadd(patchId).send({ from: '0x46fb09deaF60877710a1c6d35Fa6F59dBcfB8CBF'});
-            await axios.post('http://localhost:5000/admin/transactions', { roleFunction:"admin-deploy", transactionHash:result.transactionHash });
+        try {
+            const result = await contract1.methods.dadd(patchId).send({ from: account });
+            await axios.post('http://localhost:5001/admin/transactions', { roleFunction: "admin-deploy", transactionHash: result.transactionHash });
             console.log('Transaction added successfully');
         }
         catch (error) {

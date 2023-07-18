@@ -92,6 +92,127 @@ function Web3Connector({ setAccount, setContract, setContractStatus }) {
                         "inputs": [
                             {
                                 "internalType": "uint256",
+                                "name": "_id",
+                                "type": "uint256"
+                            }
+                        ],
+                        "name": "dadd",
+                        "outputs": [],
+                        "stateMutability": "nonpayable",
+                        "type": "function"
+                    },
+                    {
+                        "inputs": [
+                            {
+                                "internalType": "uint256",
+                                "name": "patid",
+                                "type": "uint256"
+                            }
+                        ],
+                        "name": "download",
+                        "outputs": [],
+                        "stateMutability": "nonpayable",
+                        "type": "function"
+                    },
+                    {
+                        "inputs": [
+                            {
+                                "internalType": "string",
+                                "name": "name",
+                                "type": "string"
+                            },
+                            {
+                                "internalType": "string[]",
+                                "name": "ds",
+                                "type": "string[]"
+                            },
+                            {
+                                "internalType": "string[]",
+                                "name": "ftt",
+                                "type": "string[]"
+                            }
+                        ],
+                        "name": "gbf",
+                        "outputs": [],
+                        "stateMutability": "nonpayable",
+                        "type": "function"
+                    },
+                    {
+                        "inputs": [
+                            {
+                                "internalType": "string",
+                                "name": "name",
+                                "type": "string"
+                            },
+                            {
+                                "internalType": "string[]",
+                                "name": "bugdes",
+                                "type": "string[]"
+                            },
+                            {
+                                "internalType": "uint256[]",
+                                "name": "bprior",
+                                "type": "uint256[]"
+                            }
+                        ],
+                        "name": "gprior",
+                        "outputs": [],
+                        "stateMutability": "nonpayable",
+                        "type": "function"
+                    },
+                    {
+                        "inputs": [
+                            {
+                                "internalType": "uint256",
+                                "name": "_id1",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "string",
+                                "name": "ptch",
+                                "type": "string"
+                            }
+                        ],
+                        "name": "reupload",
+                        "outputs": [],
+                        "stateMutability": "nonpayable",
+                        "type": "function"
+                    },
+                    {
+                        "inputs": [
+                            {
+                                "internalType": "uint256",
+                                "name": "_id",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "string",
+                                "name": "rsn",
+                                "type": "string"
+                            }
+                        ],
+                        "name": "rvadd",
+                        "outputs": [],
+                        "stateMutability": "nonpayable",
+                        "type": "function"
+                    },
+                    {
+                        "inputs": [
+                            {
+                                "internalType": "uint256",
+                                "name": "_id",
+                                "type": "uint256"
+                            }
+                        ],
+                        "name": "vadd",
+                        "outputs": [],
+                        "stateMutability": "nonpayable",
+                        "type": "function"
+                    },
+                    {
+                        "inputs": [
+                            {
+                                "internalType": "uint256",
                                 "name": "",
                                 "type": "uint256"
                             }
@@ -131,19 +252,6 @@ function Web3Connector({ setAccount, setContract, setContractStatus }) {
                             }
                         ],
                         "stateMutability": "view",
-                        "type": "function"
-                    },
-                    {
-                        "inputs": [
-                            {
-                                "internalType": "uint256",
-                                "name": "_id",
-                                "type": "uint256"
-                            }
-                        ],
-                        "name": "dadd",
-                        "outputs": [],
-                        "stateMutability": "nonpayable",
                         "type": "function"
                     },
                     {
@@ -207,19 +315,6 @@ function Web3Connector({ setAccount, setContract, setContractStatus }) {
                         "inputs": [
                             {
                                 "internalType": "uint256",
-                                "name": "patid",
-                                "type": "uint256"
-                            }
-                        ],
-                        "name": "download",
-                        "outputs": [],
-                        "stateMutability": "nonpayable",
-                        "type": "function"
-                    },
-                    {
-                        "inputs": [
-                            {
-                                "internalType": "uint256",
                                 "name": "",
                                 "type": "uint256"
                             }
@@ -246,29 +341,6 @@ function Web3Connector({ setAccount, setContract, setContractStatus }) {
                             }
                         ],
                         "stateMutability": "view",
-                        "type": "function"
-                    },
-                    {
-                        "inputs": [
-                            {
-                                "internalType": "string",
-                                "name": "name",
-                                "type": "string"
-                            },
-                            {
-                                "internalType": "string[]",
-                                "name": "ds",
-                                "type": "string[]"
-                            },
-                            {
-                                "internalType": "string[]",
-                                "name": "ftt",
-                                "type": "string[]"
-                            }
-                        ],
-                        "name": "gbf",
-                        "outputs": [],
-                        "stateMutability": "nonpayable",
                         "type": "function"
                     },
                     {
@@ -367,19 +439,6 @@ function Web3Connector({ setAccount, setContract, setContractStatus }) {
                         "type": "function"
                     },
                     {
-                        "inputs": [],
-                        "name": "getArray",
-                        "outputs": [
-                            {
-                                "internalType": "uint256[]",
-                                "name": "",
-                                "type": "uint256[]"
-                            }
-                        ],
-                        "stateMutability": "view",
-                        "type": "function"
-                    },
-                    {
                         "inputs": [
                             {
                                 "internalType": "uint256",
@@ -423,6 +482,19 @@ function Web3Connector({ setAccount, setContract, setContractStatus }) {
                                 "internalType": "string",
                                 "name": "",
                                 "type": "string"
+                            }
+                        ],
+                        "stateMutability": "view",
+                        "type": "function"
+                    },
+                    {
+                        "inputs": [],
+                        "name": "getArray",
+                        "outputs": [
+                            {
+                                "internalType": "uint256[]",
+                                "name": "",
+                                "type": "uint256[]"
                             }
                         ],
                         "stateMutability": "view",
@@ -496,29 +568,6 @@ function Web3Connector({ setAccount, setContract, setContractStatus }) {
                             }
                         ],
                         "stateMutability": "view",
-                        "type": "function"
-                    },
-                    {
-                        "inputs": [
-                            {
-                                "internalType": "string",
-                                "name": "name",
-                                "type": "string"
-                            },
-                            {
-                                "internalType": "string[]",
-                                "name": "bugdes",
-                                "type": "string[]"
-                            },
-                            {
-                                "internalType": "uint256[]",
-                                "name": "bprior",
-                                "type": "uint256[]"
-                            }
-                        ],
-                        "name": "gprior",
-                        "outputs": [],
-                        "stateMutability": "nonpayable",
                         "type": "function"
                     },
                     {
@@ -602,55 +651,6 @@ function Web3Connector({ setAccount, setContract, setContractStatus }) {
                         "inputs": [
                             {
                                 "internalType": "uint256",
-                                "name": "_id1",
-                                "type": "uint256"
-                            },
-                            {
-                                "internalType": "string",
-                                "name": "ptch",
-                                "type": "string"
-                            }
-                        ],
-                        "name": "reupload",
-                        "outputs": [],
-                        "stateMutability": "nonpayable",
-                        "type": "function"
-                    },
-                    {
-                        "inputs": [
-                            {
-                                "internalType": "uint256",
-                                "name": "_id",
-                                "type": "uint256"
-                            },
-                            {
-                                "internalType": "string",
-                                "name": "rsn",
-                                "type": "string"
-                            }
-                        ],
-                        "name": "rvadd",
-                        "outputs": [],
-                        "stateMutability": "nonpayable",
-                        "type": "function"
-                    },
-                    {
-                        "inputs": [
-                            {
-                                "internalType": "uint256",
-                                "name": "_id",
-                                "type": "uint256"
-                            }
-                        ],
-                        "name": "vadd",
-                        "outputs": [],
-                        "stateMutability": "nonpayable",
-                        "type": "function"
-                    },
-                    {
-                        "inputs": [
-                            {
-                                "internalType": "uint256",
                                 "name": "",
                                 "type": "uint256"
                             }
@@ -680,7 +680,7 @@ function Web3Connector({ setAccount, setContract, setContractStatus }) {
                         "type": "function"
                     }
                 ];
-                const Address = "0x81BC1514C1Ca9ac7De54B9E0F70215639D47b610";
+                const Address = "0x3Aec1Bd5c66AA790D3774cc8d8Fe1339618b4807";
                 const web3 = new Web3(ethereum);
                 const contract1 = new web3.eth.Contract(ABI, Address);
                 setContract(contract1);

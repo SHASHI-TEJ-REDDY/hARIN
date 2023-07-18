@@ -151,8 +151,8 @@ const Verifying = () => {
 
     const handleApprove = async (patchId) => {
         try {
-            const result = await contract1.methods.vadd(patchId).send({ from:  process.env.Address  });
-            await axios.post('http://localhost:5000/verifier/transactions', { roleFunction: "verifier-approve", transactionHash: result.transactionHash });
+            const result = await contract1.methods.vadd(patchId).send({ from: account });
+            await axios.post('http://localhost:5001/verifier/transactions', { roleFunction: "verifier-approve", transactionHash: result.transactionHash });
             console.log('Transaction added successfully');
             alert("Successfully Updated");
         }
@@ -167,11 +167,11 @@ const Verifying = () => {
     //   const result1 = await contract1.methods.rvadd(patchId,rejectReason).send({ from: account });
     //   alert("Successfully Updated");
     //   console.log()
-    //   await axios.post('http://localhost:5000/verifier/transactions', { roleFunction: "verifier-reject", transactionHash: result1.transactionHash });
+    //   await axios.post('http://localhost:5001/verifier/transactions', { roleFunction: "verifier-reject", transactionHash: result1.transactionHash });
     //   console.log('Transaction added successfully');
     //   // window.location.reload();
     // };
-    const handleReject = async (patchId,patch) => {
+    const handleReject = async (patchId, patch) => {
         setShowRejectReason(!showRejectReason);
         setPatchid(patchId);
         setPatchname(patch);
@@ -221,7 +221,7 @@ const Verifying = () => {
         try {
             const result1 = await contract1.methods.rvadd(patchId, rejectReason).send({ from: account });
             console.log();
-            await axios.post('http://localhost:5000/verifier/transactions', { roleFunction: "verifier-reject", transactionHash: result1.transactionHash });
+            await axios.post('http://localhost:5001/verifier/transactions', { roleFunction: "verifier-reject", transactionHash: result1.transactionHash });
             console.log('Transaction added successfully');
         }
         catch (error) {
@@ -240,7 +240,7 @@ const Verifying = () => {
                             <h3>Verifying ..."{patchname}"</h3>
                             <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        
+
                         <div className="modal-body   justify-content-center row-1">
                             {/* <p className="mx-2 p-1 ">mention treason</p> */}
                             <input
@@ -283,11 +283,11 @@ const Verifying = () => {
                                             </button>
 
                                             <button
-                                                    className="btn mx-3 btn-danger"
-                                                    data-bs-toggle="modal" data-bs-target="#example"
-                                                    onClick={() => handleReject(patch.patchid,patch.patchfilename)}
-                                                >
-                                                    Reject
+                                                className="btn mx-3 btn-danger"
+                                                data-bs-toggle="modal" data-bs-target="#example"
+                                                onClick={() => handleReject(patch.patchid, patch.patchfilename)}
+                                            >
+                                                Reject
                                             </button>
                                         </div>
                                     </div>

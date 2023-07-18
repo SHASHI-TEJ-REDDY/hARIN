@@ -22,7 +22,7 @@ const TransactionTable = ({ collectionName }) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/${collectionName}/transactions`);
+                const response = await axios.get(`http://localhost:5001/${collectionName}/transactions`);
                 console.log(response.data);
                 const transactionsWithDetails = [];
 

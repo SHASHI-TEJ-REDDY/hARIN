@@ -347,7 +347,7 @@
 
 //   const fetchItems = async () => {
 //     try {
-//       const response = await axios.get('http://localhost:5000/api/items');
+//       const response = await axios.get('http://localhost:5001/api/items');
 //       const items = response.data;
 
 //       // Extracting names from the items array
@@ -387,7 +387,7 @@
 //   // Remove the rejected card from the data56 state
 //   setData56(prevData => prevData.filter(item => item !== card));
 //   try {
-//     const response = await axios.delete(`http://localhost:5000/api/items/${card._id}`);
+//     const response = await axios.delete(`http://localhost:5001/api/items/${card._id}`);
 //     console.log(response.data); // Optional: log the response from the server
 //   } catch (error) {
 //     console.error(error);
@@ -396,7 +396,7 @@
 
 // //   const deleteItemByName = async (itemName) => {
 // //     try {
-// //       const response = await axios.delete(`http://localhost:5000/api/items/${itemName}`);
+// //       const response = await axios.delete(`http://localhost:5001/api/items/${itemName}`);
 // //       console.log(response.data); // Optional: log the response from the server
 // //     } catch (error) {
 // //       console.error(error);
@@ -1330,7 +1330,7 @@ function Getrpt() {
         // console.log(software,filteredArr3, filteredArr4);
         try {
             const result = await contract1.methods.gprior(software, filteredArr3, arr4).send({ from: account });
-            await axios.post('http://localhost:5000/labeller/transactions', { roleFunction: "labeller-priority", transactionHash: result.transactionHash });
+            await axios.post('http://localhost:5001/labeller/transactions', { roleFunction: "labeller-priority", transactionHash: result.transactionHash });
             console.log('Transaction added successfully');
         }
         catch (error) {

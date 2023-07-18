@@ -225,7 +225,7 @@ export default Verified;
 //   console.log(patchId, rejectReason);
 //   const result1 = await contract1.methods.rvadd(patchId, rejectReason).send({ from: account });
 //   console.log();
-//   await axios.post('http://localhost:5000/verifier/transactions', { roleFunction: "verifier-reject", transactionHash: result1.transactionHash });
+//   await axios.post('http://localhost:5001/verifier/transactions', { roleFunction: "verifier-reject", transactionHash: result1.transactionHash });
 //   console.log('Transaction added successfully');
 //   // window.location.reload();
 // };
